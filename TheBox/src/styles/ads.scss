@@ -1,0 +1,35 @@
+@use "color";
+
+#ads {
+  background-image: url("../assets/ads.png");
+}
+
+.ads__button {
+  border-radius: 3px !important;
+}
+
+#ads h1 {
+  font-size: 30px;
+}
+
+#ads p {
+  font-size: 20px;
+}
+
+// Responsive
+
+@media (max-width: 425px) {
+  #ads h1 {
+    font-size: 20px;
+  }
+
+  #ads p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  #ads p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,51 @@
+@use 'color';
+
+#hero{
+    position: relative;
+}
+
+.description__header{
+    font-size: 1.3em;
+}
+
+.description__des{
+    font-size: 1.5em;
+}
+
+.featurePj{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: color.$primary;
+    max-width: 450px;
+}
+
+.buttons>button{
+    background-color: black;
+}
+
+// Responsive
+
+@media (max-width: 769px){
+    .featurePj{
+        width: 40%;
+    }
+
+    .description__header{
+        font-size: 1em;
+    }
+    
+    .description__des{
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 426px){
+    #hero{
+        margin-top: 60px;
+    }
+
+    .featurePj{
+        display: none;
+    }
+}

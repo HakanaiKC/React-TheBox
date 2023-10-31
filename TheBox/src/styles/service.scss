@@ -1,0 +1,49 @@
+@use "color";
+
+#service {
+  background-color: color.$neutral-100;
+}
+
+.white {
+  color: color.$primary;
+}
+
+.blue {
+  background-color: color.$primary;
+}
+
+.service__icon {
+  width: 70px;
+  height: 110px;
+}
+
+.service__icon svg {
+  position: relative;
+}
+
+.service__icon::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: color.$rectangle;
+  display: block;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 50px;
+}
+
+.service__vertical{
+  display: none;
+}
+
+// Responsive
+
+@media (max-width: 426px){
+  .service__row{
+    display: none;
+  }
+
+  .service__vertical{
+    display: flex;
+  }
+}

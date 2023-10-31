@@ -1,0 +1,40 @@
+@use 'color';
+
+.flex-column a{
+    color: color.$neutral-200;
+    font-weight: 600;
+    position: relative;
+}
+
+.flex-column a[aria-selected="true"]{
+    color: color.$primary;
+    font-weight: 700;
+}
+
+.flex-column a[aria-selected="true"]::before{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 25px;
+    background-color: color.$primary;
+    left: 0;
+}
+
+.description{
+    background-color: color.$primary;
+}
+
+.pagination button{
+    background-color: color.$neutral-800;
+}
+
+.circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: color.$neutral-50;
+}
+
+.circle.active{
+    background-color: color.$primary;
+}

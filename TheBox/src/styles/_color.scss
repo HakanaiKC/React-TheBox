@@ -1,0 +1,26 @@
+$primary: #2947A9;
+$secondary: #F9995D;
+$neutral-900: #14171F;
+$neutral-800: #292E3D;
+$neutral-700: #3D445C;
+$neutral-500: #667299;
+$neutral-600: #525B7A;
+$neutral-400: #858EAD;
+$neutral-300: #A3AAC2;
+$neutral-100: #E0E3EB;
+$neutral-200: #C2C7D6;
+$neutral-50: #F6F8F7;
+$rectangle: #7595FD;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: $neutral-800;
+}
+
+.form-control::placeholder{
+    color: $neutral-300;
+}

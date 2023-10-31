@@ -1,0 +1,42 @@
+@use 'color';
+
+.right-info__button{
+    background-color: color.$secondary !important;
+    border-radius: 10px;
+}
+
+.primary{
+    color: color.$primary;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.small-screen-logo{
+    display: none;
+}
+
+@media (max-width: 769px){
+    .small-screen-logo{
+        display: block;
+    }
+
+    .wide-screen-logo{
+        display: none;
+    }
+}
+
+@media (min-width: 1440px){
+    .right-info__control{
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 376px){
+    .right-info__form{
+        flex-direction: column;
+    }
+
+    .right-info__button{
+        margin-top: 20px;
+    }
+}

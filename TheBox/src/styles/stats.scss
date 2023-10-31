@@ -1,0 +1,113 @@
+@use "color";
+
+@mixin stats($width, $left, $right, $top) {
+  position: relative;
+  width: $width;
+  margin-left: $left;
+  margin-right: $right;
+  margin-top: $top;
+}
+
+@mixin stats_img($top, $right, $bottom, $left) {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+.left {
+  height: 500px;
+}
+
+.happy {
+  @include stats(200px, 20%, unset, unset);
+  z-index: 1;
+}
+
+.happy_img,
+.trofy_img {
+  @include stats_img(-20px, -20px, unset, unset);
+}
+
+.project_img {
+  @include stats_img(-50%, unset, unset, -35px);
+}
+
+.business_img {
+  @include stats_img(unset, -20%, -30%, unset);
+}
+
+.projects {
+  @include stats(260px, 0, 30%, -5%);
+}
+
+.awards {
+  @include stats(200px, 10%, 0, -2%);
+  z-index: 1;
+}
+
+.years {
+  @include stats(240px, 0, 20%, -5%);
+}
+
+.stats__description {
+  color: color.$neutral-500;
+  font-size: 18px;
+  position: relative;
+}
+
+.stats__description::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: 5px;
+  height: 25px;
+  background-color: color.$secondary;
+}
+
+.left .number {
+  margin: 0;
+  font-size: 50px;
+  color: color.$neutral-900;
+}
+
+.right__heading {
+  color: color.$primary;
+  font-size: 45px;
+}
+
+.right p {
+  color: color.$neutral-600;
+}
+
+.right__button {
+  width: 150px;
+  border-radius: 0;
+  background-color: color.$primary;
+}
+
+// Responsive
+
+@media (max-width: 426px){
+  .happy{
+    @include stats(200px, 40%, unset, unset);
+  }
+
+  .projects {
+    @include stats(260px, 0, 10%, -5%);
+  }
+  
+  .awards {
+    @include stats(200px, 30%, 0, -2%);
+  }
+}
+
+@media (max-width: 321px){
+  .projects {
+    @include stats(260px, 0, 0, -5%);
+  }
+}

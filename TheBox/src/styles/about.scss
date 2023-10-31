@@ -1,0 +1,71 @@
+@use "color";
+
+#about {
+  display: flex;
+  align-items: center;
+}
+
+.founder_img {
+  position: relative;
+}
+
+.frame {
+  background-color: color.$primary;
+  max-width: 488px;
+  max-height: 523px;
+  position: absolute;
+  right: 0;
+}
+
+.frame__des {
+  font-size: 20px;
+}
+
+#about button {
+  color: color.$primary;
+}
+
+#about {
+  color: color.$primary;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#about:hover {
+  color: color.$neutral-900;
+}
+
+//Responsive
+
+@media (max-width: 1025px) {
+  .founder_img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 769px) {
+  .frame {
+    width: 300px;
+  }
+
+  .frame__des {
+    font-size: unset;
+  }
+}
+
+@media (max-width: 426px) {
+  #about {
+    display: block;
+  }
+
+  .founder_img {
+    position: static;
+    width: 100%;
+  }
+  
+  .frame {
+    background-color: color.$primary;
+    width: 100%;
+    position: static;
+  }
+}

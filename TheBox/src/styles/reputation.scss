@@ -1,0 +1,26 @@
+@use "color";
+
+.reputation__item strong {
+  color: color.$neutral-700;
+}
+
+.reputation__item p {
+  color: color.$neutral-400;
+}
+
+.reputation__icon {
+  color: color.$secondary;
+}
+
+@media (max-width: 576px) {
+  .reputation__row > .col {
+    flex: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mx-5 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}

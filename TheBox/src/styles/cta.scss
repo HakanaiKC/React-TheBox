@@ -1,0 +1,40 @@
+@use "color";
+
+.wrapper {
+  background-color: color.$neutral-50;
+}
+
+#cta .form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.red {
+  color: #ed6565;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.form__phone {
+  margin-top: 0.35rem;
+}
+
+.form__required {
+  color: color.$neutral-500;
+}
+
+.form__button {
+  border-radius: 2px;
+  background-color: color.$primary;
+  width: 250px;
+}
+
+.form__button:hover {
+  background-color: color.$neutral-900;
+}
+
+@media (max-width: 426px) {
+  #cta .form__button {
+    width: 100%;
+  }
+}
