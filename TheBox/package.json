@@ -11,6 +11,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "homepage": "https://hakanaikc.github.io/React-TheBox/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.3.2",
